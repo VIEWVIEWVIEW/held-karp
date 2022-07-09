@@ -1,7 +1,9 @@
 # Held Karp Algorithm implemented in Python
 
 ## Dependencies
-```pip install memory-profiler seaborn matplotlib pandas numpy ```
+```
+pip install memory-profiler seaborn matplotlib pandas numpy
+```
 
 ## Quick Overview
 - Find the main entrypoint here: https://github.com/VIEWVIEWVIEW/held-karp/blob/main/tsp.py#L144
