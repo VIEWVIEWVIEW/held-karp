@@ -1,4 +1,9 @@
-# Quick Overview
+# Held Karp Algorithm implemented in Python
+
+## Dependencies
+```pip install memory-profiler seaborn matplotlib pandas numpy ```
+
+## Quick Overview
 - Find the main entrypoint here: https://github.com/VIEWVIEWVIEW/held-karp/blob/main/tsp.py#L144
 - First you need to read a file with coordinates, you can find a brief description below. You can use ``get_cities()`` for that, like so:
 ```python3
@@ -13,7 +18,7 @@ dist = get_distance_table(list_of_cities)
 length_of_optimal_path, optimal_path = tsp(dist)
 ```
 
-# list_of_cities
+## list_of_cities
 In case you want to write your own data importer, make sure you return it in the following fashion:
 ```python3
 class City(TypedDict):
@@ -57,5 +62,33 @@ Use the following *space seperated* data format:
 
 Any lines which do not follow this format are ignored.
 
+## Performance
+### Time
+Time complexity grows exponentially:
+![https://github.com/VIEWVIEWVIEW/held-karp/blob/main/filename.png?raw=true](https://github.com/VIEWVIEWVIEW/held-karp/blob/main/filename.png?raw=true)
+
+![https://github.com/VIEWVIEWVIEW/held-karp/blob/main/filename_MOAR.png?raw=true](https://github.com/VIEWVIEWVIEW/held-karp/blob/main/filename_MOAR.png?raw=true)
+
+You can find the benchmark script to create these charts in ``main.py``.
+It runs with the following number of cities by default: ``[10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]`` 
+
+In case you only want to run with a specific amount of cities, just run main like so: ``python main.py --amount-of-cities 15``
+
+### Memory
+For memory profiling we used [memory-profiler](https://pypi.org/project/memory-profiler/).
+
+If you want to create a memory profile, just use the memory-profiler ``mrun`` feature:
+``mprof run --include-children main.py --amount-of-cities 15``
+
+It will sample the memory usage of the python process into a new file ``mprofile_<timestamp>.dat``. Afterwards you can plot it using ``mplot mprofile_<timestamp>.dat``. Don't forget to install matplotlib.
+
+
+### 12 Cities
+![https://github.com/VIEWVIEWVIEW/held-karp/blob/main/12.png?raw=true](https://github.com/VIEWVIEWVIEW/held-karp/blob/main/12.png?raw=true)
+### 18 Cities
+![https://github.com/VIEWVIEWVIEW/held-karp/blob/main/18.png?raw=true](https://github.com/VIEWVIEWVIEW/held-karp/blob/main/18.png?raw=true)
+
+### 20 Cities
+![https://github.com/VIEWVIEWVIEW/held-karp/blob/main/22.png?raw=true](https://github.com/VIEWVIEWVIEW/held-karp/blob/main/22.png?raw=true)
 
 
