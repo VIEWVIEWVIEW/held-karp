@@ -63,6 +63,7 @@ def custom_list_of_cities_importer():
 ## Performance
 ### Time
 Time complexity grows exponentially:
+
 ![https://github.com/VIEWVIEWVIEW/held-karp/blob/main/filename.png?raw=true](https://github.com/VIEWVIEWVIEW/held-karp/blob/main/filename.png?raw=true)
 
 ![https://github.com/VIEWVIEWVIEW/held-karp/blob/main/filename_MOAR.png?raw=true](https://github.com/VIEWVIEWVIEW/held-karp/blob/main/filename_MOAR.png?raw=true)
@@ -83,8 +84,10 @@ It will sample the memory usage of the python process into a new file ``mprofile
 
 ### 12 Cities
 ![https://github.com/VIEWVIEWVIEW/held-karp/blob/main/12.png?raw=true](https://github.com/VIEWVIEWVIEW/held-karp/blob/main/12.png?raw=true)
+
 ### 18 Cities
 ![https://github.com/VIEWVIEWVIEW/held-karp/blob/main/18.png?raw=true](https://github.com/VIEWVIEWVIEW/held-karp/blob/main/18.png?raw=true)
+
 
 ### 20 Cities
 ![https://github.com/VIEWVIEWVIEW/held-karp/blob/main/22.png?raw=true](https://github.com/VIEWVIEWVIEW/held-karp/blob/main/22.png?raw=true)
