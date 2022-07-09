@@ -20,6 +20,22 @@ dist = get_distance_table(list_of_cities)
 length_of_optimal_path, optimal_path = tsp(dist)
 ```
 
+## Format of source files with coordinates
+Use the following *space seperated* data format:
+``numeric-id x y``
+
+```
+1 512 512
+2 1337 1337
+3 456 456
+4 789 789
+5 987 654
+6 123 321
+7 876 543
+```
+
+Any lines which do not follow this format are ignored.
+
 ## list_of_cities
 In case you want to write your own data importer, make sure you return it in the following fashion:
 ```python3
@@ -43,26 +59,6 @@ def custom_list_of_cities_importer():
     return list_of_cities
 ```
 
-
-## Sources
- - [Berlin52 Dataset](http://elib.zib.de/pub/mp-testdata/tsp/tsplib/tsp/berlin52.tsp)
-
-
-## How to use with other data sets
-Use the following *space seperated* data format:
-``numeric-id x y``
-
-```
-1 512 512
-2 1337 1337
-3 456 456
-4 789 789
-5 987 654
-6 123 321
-7 876 543
-```
-
-Any lines which do not follow this format are ignored.
 
 ## Performance
 ### Time
@@ -92,5 +88,9 @@ It will sample the memory usage of the python process into a new file ``mprofile
 
 ### 20 Cities
 ![https://github.com/VIEWVIEWVIEW/held-karp/blob/main/22.png?raw=true](https://github.com/VIEWVIEWVIEW/held-karp/blob/main/22.png?raw=true)
+
+
+## Sources
+ - [Berlin52 Dataset](http://elib.zib.de/pub/mp-testdata/tsp/tsplib/tsp/berlin52.tsp)
 
 
