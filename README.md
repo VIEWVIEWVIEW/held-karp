@@ -1,5 +1,5 @@
 ## Sources
- - [Berlin52](http://elib.zib.de/pub/mp-testdata/tsp/tsplib/tsp/berlin52.tsp)
+ - [Berlin52 Dataset](http://elib.zib.de/pub/mp-testdata/tsp/tsplib/tsp/berlin52.tsp)
 
 
 ## How to use with other data sets
@@ -7,7 +7,7 @@ Use the following *space seperated* data format:
 ``numeric-id x y``
 
 ```
-1 512 512 <-- city with id 1 is used as the start of our tour
+1 512 512
 2 1337 1337
 3 456 456
 4 789 789
@@ -19,7 +19,4 @@ Use the following *space seperated* data format:
 Any lines which do not follow this format are ignored.
 
 
-
-## Efficiency & Tests
-Todo
 
